@@ -1,4 +1,4 @@
-const C = "assistente-mv2hy2od";
+const C = "assistente-mv2iq11c";
 const FILES = ["./", "index.html", "manifest.webmanifest", "icone-180.png", "icone-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(C).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== C).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
